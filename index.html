@@ -1,131 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desbloqueie Seu Sono - O Rei do Sono</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0c0528;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    h1, h2, h3 {
-      color: #ffd700;
-    }
-    .button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #ffffff;
-      color: #073f92;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 0 10px #03d7fcfc;
-    }
-    .highlight {
-      color: #00ffff;
-      font-weight: bold;
-    }
-    ul {
-      list-style-type: '✔️ ';
-      padding-left: 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .testimony {
-      background-color: #1b1f3d;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      border-left: 5px solid #00ffff;
-    }
-    .urgency {
-      color: #ff4d4d;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueie Seu Sono - O Rei do Sono</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Ajustes para a imagem de fundo */
+            background-image: url("Céu Noturno Estrelado com Estrela Dourada.png");
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center; /* Centraliza a imagem */
+            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+            margin: 0; /* Remove margem padrão do body */
+            padding: 0; /* Remove padding padrão do body */
+            display: flex; /* Para centralizar o container verticalmente */
+            justify-content: center; /* Para centralizar o container horizontalmente */
+            align-items: flex-start; /* Alinha o conteúdo ao topo do viewport, se necessário */
+            min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto; /* Adiciona margem superior e inferior para um respiro */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para melhor leitura */
+            border-radius: 15px; /* Bordas mais arredondadas para o container */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Sombra mais suave e temática */
+        }
+        h1, h2, h3 {
+            color: #ffef0b; /* Amarelo dourado */
+            font-weight: bold;
+            text-align: center; /* Centraliza os títulos */
+            margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+        }
+        h1 {
+            font-size: 2.2em; /* Tamanho maior para o título principal */
+        }
+        h2 {
+            font-size: 1.6em;
+            margin-top: -10px; /* Ajusta o espaçamento entre h1 e h2 */
+        }
+        h3 {
+            font-size: 1.3em;
+            border-bottom: 2px solid #08daff; /* Linha abaixo dos subtítulos */
+            padding-bottom: 10px;
+        }
+        .button {
+            display: block; /* Ocupa a largura total para melhor clique */
+            width: fit-content; /* Ajusta a largura ao conteúdo */
+            margin: 30px auto; /* Centraliza o botão */
+            padding: 18px 40px; /* Aumenta o padding do botão */
+            background-color: #ffffff;
+            color: #073f92;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(3, 215, 252, 0.8); /* Sombra mais evidente para o botão */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+        }
+        .button:hover {
+            background-color: #e0e0e0; /* Cor um pouco mais escura ao passar o mouse */
+            transform: translateY(-3px); /* Efeito de "levantar" ao passar o mouse */
+        }
+        .highlight {
+            color: #08daff; /* Azul ciano */
+            font-weight: bolder;
+        }
+        ul {
+            list-style-type: '✔️ '; /* Ícone personalizado */
+            padding-left: 25px; /* Ajusta o espaçamento do ícone */
+            margin-bottom: 20px; /* Espaçamento abaixo das listas */
+        }
+        li {
+            margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+        }
+        .section {
+            margin-bottom: 40px; /* Espaçamento entre as seções */
+            padding-bottom: 20px; /* Padding interno para as seções */
+        }
+        .testimony {
+            color: #ffffff;
+            background-color: #030f32; /* Azul bem escuro */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 5px solid #69fddf; /* Borda lateral azul-esverdeado */
+            line-height: 1.5; /* Altura da linha para melhor leitura */
+        }
+        .testimony i {
+            display: block; /* Nome do depoente em uma nova linha */
+            text-align: right; /* Alinha o nome à direita */
+            margin-top: 10px;
+            font-style: normal; /* Remove itálico padrão */
+            font-weight: bold;
+            color: #69fddf;
+        }
+        .urgency {
+            color: #ff4d4d; /* Vermelho vibrante */
+            font-weight: bold;
+            text-align:center; /* Centraliza a mensagem de urgência */
+            font-size: 1.2em; /* Aumenta o tamanho da fonte para a urgência */
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            color: #ffffff; /* Cor do texto branco */
+            line-height: 1.6; /* Altura da linha para melhor leitura */
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>❌ Acorda cansado todo dia?</h1>
-    <h2>O problema não é você... é o que você faz antes de dormir.</h2>
+    <div class="container">
+        <h1>❌ Acorda cansado todo dia?</h1>
+        <h2>O problema não é você... é o que você faz antes de dormir.</h2>
 
-    <div class="section">
-      <h3>😵‍💫 Você sente isso?</h3>
-      <ul>
-        <li>Deita, mas não consegue desligar a mente</li>
-        <li>Scroll infinito antes de dormir</li>
-        <li>Sono leve, acorda quebrado, pesado</li>
-        <li>Falta de energia, disposição e produtividade</li>
-        <li>Ansiedade, estresse e cansaço constante</li>
-      </ul>
-    </div>
+        <div class="section">
+            <h3>😵‍💫 Você sente isso?</h3>
+            <ul>
+                <li>Deita, mas não consegue desligar a mente</li>
+                <li>Scroll infinito antes de dormir</li>
+                <li>Sono leve, acorda quebrado, pesado</li>
+                <li>Falta de energia, disposição e produtividade</li>
+                <li>Ansiedade, estresse e cansaço constante</li>
+            </ul>
+        </div>
 
-    <div class="section">
-      <h3>🔍 A verdade que ninguém te conta:</h3>
-      <p>O excesso de <span class="highlight">telas, luz azul e feed infinito</span> está destruindo seu sono, sua saúde mental e sua energia.</p>
-      <p>Seu cérebro não sabe mais quando é hora de desligar. Resultado? Você acorda quebrado... todo dia.</p>
-    </div>
+        <div class="section">
+            <h3>🔍 A verdade que ninguém te conta:</h3>
+            <p>O excesso de <span class="highlight">telas, luz azul e feed infinito</span> está destruindo seu sono, sua saúde mental e sua energia.</p>
+            <p>Seu cérebro não sabe mais quando é hora de desligar. Resultado? Você acorda quebrado... todo dia.</p>
+        </div>
 
-    <div class="section">
-      <h3>🚀 O QUE VOCÊ VAI RECEBER:</h3>
-      <ul>
-        <li>📘 E-book Digital — “Desbloqueie Seu Sono”</li>
-        <li>✅ Checklist da Higiene do Sono</li>
-        <li>🔥 Desafio 7 Dias para restaurar seu sono</li>
-        <li>Passo a passo prático, rápido e direto</li>
-      </ul>
-    </div>
+        <div class="section">
+            <h3>🚀 O QUE VOCÊ VAI RECEBER:</h3>
+            <ul>
+                <li>📘 E-book Digital — “Desbloqueie Seu Sono”</li>
+                <li>✅ Checklist da Higiene do Sono</li>
+                <li>🔥 Desafio 7 Dias para restaurar seu sono</li>
+                <li>Passo a passo prático, rápido e direto</li>
+            </ul>
+        </div>
 
-    <div class="section">
-      <h3>🎯 Ideal para você que:</h3>
-      <ul>
-        <li>Quer dormir melhor e acordar com energia</li>
-        <li>Quer se livrar do cansaço e da mente acelerada</li>
-        <li>Não aguenta mais acordar quebrado</li>
-      </ul>
-    </div>
+        <div class="section">
+            <h3>🎯 Ideal para você que:</h3>
+            <ul>
+                <li>Quer dormir melhor e acordar com energia</li>
+                <li>Quer se livrar do cansaço e da mente acelerada</li>
+                <li>Não aguenta mais acordar quebrado</li>
+            </ul>
+        </div>
 
-    <div class="section">
-      <h3>🔥 Depoimentos:</h3>
-      <div class="testimony">“Acordava quebrado todos os dias. Depois do guia, voltei a dormir de verdade. Vale cada centavo!” — <i>Lucas F.</i></div>
-      <div class="testimony">“Sério, isso aqui deveria ser ensinado na escola. Minha vida mudou.” — <i>Amanda R.</i></div>
-      <div class="testimony">“Achei que não tinha solução. 3 dias aplicando e meu sono virou outro.” — <i>Paulo M.</i></div>
-    </div>
+        <div class="section">
+            <h3>🔥 Depoimentos:</h3>
+            <div class="testimony">“Acordava quebrado todos os dias. Depois do guia, voltei a dormir de verdade. Vale cada centavo!” <i>— Lucas F.</i></div>
+            <div class="testimony">“Sério, isso aqui deveria ser ensinado na escola. Minha vida mudou.” <i>— Amanda R.</i></div>
+            <div class="testimony">“Achei que não tinha solução. 3 dias aplicando e meu sono virou outro.” <i>— Paulo M.</i></div>
+        </div>
 
-    <div class="section">
-      <h3>💥 Oferta Especial:</h3>
-      <p><span class="urgency">De R$24,99 por apenas R$14,99.</span> 🔥 Por tempo limitado!</p>
-      <p class="urgency">⚠️ A qualquer momento esse preço pode voltar ao normal.</p>
-    </div>
+        <div class="section">
+            <h3>💥 Oferta Especial:</h3>
+           <p class="urgency">De R$24,99 por apenas R$14,99. 🔥 Por tempo limitado!</p>
+            <p class="urgency">⚠️ A qualquer momento esse preço pode voltar ao normal.</p>
+        </div>
 
-    <div class="section">
-      <h3>🛡️ Garantia incondicional:</h3>
-      <p>Se em 7 dias você não sentir diferença no seu sono, te devolvemos 100% do seu dinheiro. Simples assim.</p>
-    </div>
+        <div class="section">
+            <h3>🛡️ Garantia incondicional:</h3>
+            <p>Se em 7 dias você não sentir diferença no seu sono, te devolvemos 100% do seu dinheiro. Simples assim.</p>
+        </div>
 
-    <div class="section">
-      <h3>✅ Como funciona:</h3>
-      <ul>
-        <li>Clique no botão abaixo</li>
-        <li>Faça seu pagamento na página segura da Kiwify</li>
-        <li>Receba seu e-book no e-mail e comece hoje sua transformação</li>
-      </ul>
-      <a href="https://pay.kiwify.com.br/aFtfb0S" class="button">Quero desbloquear meu sono agora!</a>
+        <div class="section">
+            <h3>✅ Como funciona:</h3>
+            <ul>
+                <li>Clique no botão abaixo</li>
+                <li>Faça seu pagamento na página segura da Kiwify</li>
+                <li>Receba seu e-book no e-mail e comece hoje sua transformação</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/aFtfb0S" class="button">Quero desbloquear meu sono agora!</a>
+        </div>
     </div>
-  </div>
 
 </body>
 </html>
