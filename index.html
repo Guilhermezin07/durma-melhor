@@ -1,200 +1,145 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desbloqueie Seu Sono - O Rei do Sono</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url("Céu Noturno Estrelado com Estrela Dourada.png");
-            background-repeat: no-repeat; /* Evita que a imagem se repita */
-            background-size: cover; /* Faz a imagem cobrir toda a área */
-            background-position: center; /* Centraliza a imagem */
-            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
-            margin: 0; /* Remove margem padrão do body */
-            padding: 0; /* Remove padding padrão do body */
-            display: flex; /* Para centralizar o container verticalmente */
-            justify-content: center; /* Para centralizar o container horizontalmente */
-            align-items: flex-start; /* Alinha o conteúdo ao topo do viewport, se necessário */
-            min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
-        }
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: 40px auto; /* Adiciona margem superior e inferior para um respiro */
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para melhor leitura */
-            border-radius: 15px; /* Bordas mais arredondadas para o container */
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Sombra mais suave e temática */
-        }
-        h1, h2, h3 {
-            color: #ffef0b; /* Amarelo dourado */
-            font-weight: bold;
-            text-align: center; /* Centraliza os títulos */
-            margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
-        }
-        h1 {
-            font-size: 2.2em; /* Tamanho maior para o título principal */
-        }
-        h2 {
-            font-size: 1.6em;
-            margin-top: -10px; /* Ajusta o espaçamento entre h1 e h2 */
-        }
-        h3 {
-            font-size: 1.3em;
-            border-bottom: 2px solid #08daff; /* Linha abaixo dos subtítulos */
-            padding-bottom: 10px;
-        }
-        .button {
-            display: block; /* Ocupa a largura total para melhor clique */
-            width: fit-content; /* Ajusta a largura ao conteúdo */
-            margin: 30px auto; /* Centraliza o botão */
-            padding: 18px 40px; /* Aumenta o padding do botão */
-            background-color: #ffffff;
-            color: #073f92;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(3, 215, 252, 0.8); /* Sombra mais evidente para o botão */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
-        }
-        .button:hover {
-            background-color: #e0e0e0; /* Cor um pouco mais escura ao passar o mouse */
-            transform: translateY(-3px); /* Efeito de "levantar" ao passar o mouse */
-        }
-        .highlight {
-            color: #08daff; /* Azul ciano */
-            font-weight: bolder;
-        }
-        ul {
-            list-style-type: '✔️ '; /* Ícone personalizado */
-            padding-left: 25px; /* Ajusta o espaçamento do ícone */
-            margin-bottom: 20px; /* Espaçamento abaixo das listas */
-        }
-        li {
-            margin-bottom: 10px; /* Espaçamento entre os itens da lista */
-        }
-        .section {
-            margin-bottom: 40px; /* Espaçamento entre as seções */
-            padding-bottom: 20px; /* Padding interno para as seções */
-        }
-        .testimony {
-            color: #ffffff;
-            background-color: #030f32; /* Azul bem escuro */
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 5px solid #69fddf; /* Borda lateral azul-esverdeado */
-            line-height: 1.5; /* Altura da linha para melhor leitura */
-        }
-        .testimony i {
-            display: block; /* Nome do depoente em uma nova linha */
-            text-align: right; /* Alinha o nome à direita */
-            margin-top: 10px;
-            font-style: normal; /* Remove itálico padrão */
-            font-weight: bold;
-            color: #69fddf;
-        }
-        .urgency {
-            color: #ff4d4d; /* Vermelho vibrante */
-            font-weight: bold;
-            text-align: center; /* Centraliza a mensagem de urgência */
-            font-size: 1.2em; /* Aumenta o tamanho da fonte para a urgência */
-            margin-bottom: 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durma Melhor - Vitrine</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient(135deg, #360552, #8f07df, #390b8d, #3706fc, #051674, #0a9dff);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      overflow-x: hidden;
+    }
 
-        p, li {
-            color: #ffffff; /* Cor do texto branco */
-            line-height: 1.6; /* Altura da linha para melhor leitura */
-        }
+    @keyframes gradientAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
-        .oferta-img {
-            max-width: 250px; /* Limita a largura da imagem */
-            height: auto; /* Mantém a proporção */
-            display: block; /* Garante que a imagem se comporte como um bloco */
-            margin: 20px auto; /* Centraliza a imagem e adiciona margem */
-            border-radius: 20px; /* Bordas arredondadas para a imagem */
-            box-shadow: 0 5px 15px rgba(3, 75, 95, 0.5); /* Sombra para destacar */
-        }
-    </style>
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {opacity: 0.2;}
+      50% {opacity: 1;}
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin: 40px 0 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff9800;
+      color: #fff;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #e68900;
+    }
+
+    .benefits, .testimonials {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .benefit, .testimonial {
+      margin: 20px 0;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #ffd700;
+    }
+  </style>
 </head>
 <body>
+  <div class="stars">
+    <div class="star" style="top:10%; left:20%; animation-duration:2s;"></div>
+    <div class="star" style="top:30%; left:50%; animation-duration:3s;"></div>
+    <div class="star" style="top:60%; left:70%; animation-duration:1.5s;"></div>
+    <div class="star" style="top:80%; left:10%; animation-duration:2.5s;"></div>
+    <div class="star" style="top:40%; left:90%; animation-duration:2.2s;"></div>
+    <div class="star" style="top:15%; left:75%; animation-duration:1.8s;"></div>
+  </div>
 
-    <div class="container">
-        <h1>❌ Acorda cansado todo dia?</h1>
-        <h2>O problema não é você... é o que você faz antes de dormir.</h2>
+  <div class="container">
+    <h1>Sono Profundo, Vida Plena 🌙</h1>
+    <p>O guia prático para transformar suas noites e acordar cheio de energia.  
+    Descubra os segredos de quem realmente domina o poder do sono.</p>
 
-        <div class="section">
-            <h3>😵‍💫 Você sente isso?</h3>
-            <ul>
-                <li>Deita, mas não consegue desligar a mente</li>
-                <li>Scroll infinito antes de dormir</li>
-                <li>Sono leve, acorda quebrado, pesado</li>
-                <li>Falta de energia, disposição e produtividade</li>
-                <li>Ansiedade, estresse e cansaço constante</li>
-            </ul>
-        </div>
-
-        <a href="https://pay.kiwify.com.br/aFtfb0S" class="button">SIM! Eu Sinto Isso e Quero Resolver Isso Agora!</a>
-
-        <div class="section">
-            <h3>🔍 A verdade que ninguém te conta:</h3>
-            <p>O excesso de <span class="highlight">telas, luz azul e feed infinito</span> está destruindo seu sono, sua saúde mental e sua energia.</p>
-            <p>Seu cérebro não sabe mais quando é hora de desligar. Resultado? Você acorda quebrado... todo dia.</p>
-        </div>
-
-        <div class="section">
-            <h3>🚀 O QUE VOCÊ VAI RECEBER:</h3>
-            <ul>
-                <li>📘 E-book Digital — “Desbloqueie Seu Sono”</li>
-                <li>✅ Checklist da Higiene do Sono</li>
-                <li>🔥 Desafio 7 Dias para restaurar seu sono</li>
-                <li>Passo a passo prático, rápido e direto</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>🎯 Ideal para você que:</h3>
-            <ul>
-                <li>Quer dormir melhor e acordar com energia</li>
-                <li>Quer se livrar do cansaço e da mente acelerada</li>
-                <li>Não aguenta mais acordar quebrado</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>🔥 Depoimentos:</h3>
-            <div class="testimony">“Acordava quebrado todos os dias. Depois do guia, voltei a dormir de verdade. Vale cada centavo!” <i>— Lucas F.</i></div>
-            <div class="testimony">“Sério, isso aqui deveria ser ensinado na escola. Minha vida mudou.” <i>— Amanda R.</i></div>
-            <div class="testimony">“Achei que não tinha solução. 3 dias aplicando e meu sono virou outro.” <i>— Paulo M.</i></div>
-        </div>
-
-        <div class="section">
-            <h3>💥 Oferta Especial:</h3>
-            <p class="urgency">⚠️ ATENÇÃO: NA COMPRA DE 1 E-BOOK VOCÊ TAMBÉM LEVA OUTRO 🔥 </p>
-            <p class="urgency"> NÃO PERCA ESSA OPORTUNIDADE DE MELHORAR O SEU SONO!</p>
-
-            <img src="guia sono.png" alt="Guia para sono perfeito" class="oferta-img">
-
-            <p class="urgency">De R$24,99 por apenas R$14,99. 🔥 Por tempo limitado!</p>
-        </div>
-
-        <div class="section">
-            <h3>🛡️ Garantia incondicional:</h3>
-            <p>Se em 7 dias você não sentir diferença no seu sono, te devolvemos 100% do seu dinheiro. Simples assim.</p>
-        </div>
-
-        <div class="section">
-            <h3>✅ Como funciona:</h3>
-            <ul>
-                <li>Clique no botão abaixo</li>
-                <li>Faça seu pagamento na página segura da Kiwify</li>
-                <li>Receba seu e-book no e-mail e comece hoje sua transformação</li>
-            </ul>
-            <a href="https://pay.kiwify.com.br/aFtfb0S" class="button">Quero desbloquear meu sono agora!</a>
-        </div>
+    <div class="benefits">
+      <h2>✨ O que você vai aprender:</h2>
+      <div class="benefit">✅ Como criar uma rotina noturna que prepara o corpo e a mente para dormir rápido.</div>
+      <div class="benefit">✅ Técnicas simples para <span class="highlight">aumentar o sono profundo</span>.</div>
+      <div class="benefit">✅ Como evitar os 7 maiores sabotadores do sono.</div>
+      <div class="benefit">✅ Estratégias para acordar com energia e foco, sem depender de café.</div>
     </div>
 
+    <div class="testimonials">
+      <h2>💬 O que dizem nossos leitores:</h2>
+      <div class="testimonial">"Em apenas 1 semana aplicando o guia, parei de acordar cansado. Energia renovada!" – <i>Lucas, 28 anos</i></div>
+      <div class="testimonial">"Sempre tive insônia, mas agora consigo dormir em menos de 15 minutos." – <i>Ana, 34 anos</i></div>
+      <div class="testimonial">"Achei que fosse impossível acordar cedo sem sofrer. Hoje acordo antes do despertador." – <i>Carla, 41 anos</i></div>
+    </div>
+
+    <h2>🚀 Está pronto para transformar seu sono?</h2>
+    <p>Um clique pode mudar suas noites para sempre.  
+    Acesse agora o guia completo e descubra o que está te impedindo de dormir melhor.</p>
+
+    <a href="https://go.hotmart.com/U101440542K" class="btn">Quero meu guia agora</a>
+  </div>
 </body>
 </html>
