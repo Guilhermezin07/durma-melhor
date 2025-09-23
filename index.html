@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Durma Melhor - Vitrine</title>
+  <title>Sono Profundo, Vida Plena</title>
   <style>
     body {
       margin: 0;
@@ -53,22 +53,25 @@
       z-index: 1;
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
     h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin-bottom: 20px;
+      text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
     }
 
     h2 {
-      font-size: 2em;
+      font-size: 2.2em;
       margin: 40px 0 20px;
+      color: #ffd700;
+      text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.5);
     }
 
     p {
       font-size: 1.2em;
-      line-height: 1.6em;
+      line-height: 1.7em;
       margin-bottom: 20px;
     }
 
@@ -76,32 +79,63 @@
       display: inline-block;
       background: #ff9800;
       color: #fff;
-      padding: 15px 25px;
+      padding: 18px 30px;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 1.2em;
+      font-size: 1.3em;
+      font-weight: bold;
       transition: 0.3s;
-      margin-top: 20px;
+      margin-top: 30px;
+      box-shadow: 0px 0px 15px rgba(255, 152, 0, 0.6);
+      animation: pulse 1.8s infinite;
     }
 
     .btn:hover {
       background: #e68900;
+      transform: scale(1.05);
     }
 
-    .benefits, .testimonials {
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(255,152,0,0.7); }
+      50% { box-shadow: 0 0 25px rgba(255,152,0,1); }
+      100% { box-shadow: 0 0 10px rgba(255,152,0,0.7); }
+    }
+
+    .benefits, .testimonials, .before-after {
       background: rgba(0,0,0,0.4);
-      padding: 20px;
+      padding: 25px;
       border-radius: 12px;
       margin-bottom: 40px;
     }
 
     .benefit, .testimonial {
-      margin: 20px 0;
+      margin: 15px 0;
+      font-size: 1.1em;
     }
 
     .highlight {
       font-weight: bold;
       color: #ffd700;
+      text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6);
+    }
+
+    .before-after {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .ba-card {
+      width: 45%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .ba-card h3 {
+      color: #ffd700;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -126,6 +160,17 @@
       <div class="benefit">✅ Técnicas simples para <span class="highlight">aumentar o sono profundo</span>.</div>
       <div class="benefit">✅ Como evitar os 7 maiores sabotadores do sono.</div>
       <div class="benefit">✅ Estratégias para acordar com energia e foco, sem depender de café.</div>
+    </div>
+
+    <div class="before-after">
+      <div class="ba-card">
+        <h3>😩 Antes</h3>
+        <p>Noites mal dormidas, cansaço constante, dificuldade de foco e irritação.</p>
+      </div>
+      <div class="ba-card">
+        <h3>💪 Depois</h3>
+        <p>Descanso profundo, energia renovada, mente clara e produtividade em alta.</p>
+      </div>
     </div>
 
     <div class="testimonials">
