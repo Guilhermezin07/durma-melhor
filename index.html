@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sono Profundo, Vida Plena</title>
-  <style>
+  <title>Sono Profundo, Vida Plena - Oferta Exclusiva</title> <style>
     body {
       margin: 0;
       padding: 0;
@@ -101,7 +100,7 @@
       100% { box-shadow: 0 0 10px rgba(255,152,0,0.7); }
     }
 
-    .benefits, .testimonials, .before-after {
+    .benefits, .testimonials, .before-after, .offer-section { /* Adicionado .offer-section */
       background: rgba(0,0,0,0.4);
       padding: 25px;
       border-radius: 12px;
@@ -137,7 +136,71 @@
       color: #ffd700;
       margin-bottom: 10px;
     }
+
+    /* Estilos para a nova seção de oferta */
+    .offer-section h2.highlight-offer {
+        font-size: 2.5em;
+        color: #ff9800; /* Dourado/Laranja para destaque */
+        text-shadow: 0px 0px 10px rgba(255, 152, 0, 0.8);
+        margin-bottom: 15px;
+    }
+
+    .offer-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Espaço entre as imagens */
+        margin: 30px 0;
+        flex-wrap: wrap; /* Para quebra de linha em telas pequenas */
+    }
+
+    .offer-images img {
+        max-width: 250px; /* Tamanho da imagem principal */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5); /* Sombra para destacar */
+    }
+
+    .offer-images .bonus-img {
+        max-width: 150px; /* Tamanho do bônus, um pouco menor */
+        opacity: 0.8; /* Levemente menos proeminente que o principal */
+        transform: rotate(5deg); /* Um toque de dinamismo */
+    }
+
+    .offer-description {
+        font-size: 1.3em;
+        line-height: 1.8em;
+        font-weight: bold;
+        color: #ffd700; /* Cor de destaque para a descrição */
+        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6);
+    }
+    /* Media queries para responsividade */
+    @media (max-width: 768px) {
+        .ba-card {
+            width: 90%; /* Cartões antes/depois ocupam quase toda a largura em telas menores */
+        }
+        h1 {
+            font-size: 2.2em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1em;
+        }
+        .btn {
+            padding: 15px 25px;
+            font-size: 1.1em;
+        }
+        .offer-section h2.highlight-offer {
+            font-size: 2em;
+        }
+        .offer-images img, .offer-images .bonus-img {
+            max-width: 180px; /* Ajusta o tamanho das capas para telas menores */
+        }
+    }
   </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
 </head>
 <body>
   <div class="stars">
@@ -151,16 +214,25 @@
 
   <div class="container">
     <h1>Sono Profundo, Vida Plena 🌙</h1>
-    <p>O guia prático para transformar suas noites e acordar cheio de energia.  
+    <p>O guia prático para transformar suas noites e acordar cheio de energia.  
     Descubra os segredos de quem realmente domina o poder do sono.</p>
 
+    <div class="offer-section">
+      <h2 class="highlight-offer">✨ OFERTA EXCLUSIVA: Compre 1 e Leve Outro! ✨</h2>
+      <p class="offer-description">Adquira o guia "Sono Profundo, Vida Plena" e receba GRÁTIS o "Checklist do Sono Restaurador"! </p>
+      <div class="offer-images">
+        <img src="sono-profundo-capa.png" alt="Capa do E-book Sono Profundo, Vida Plena" class="main-ebook-img"> 
+        <img src="checklist-sono.png" alt="Capa do Bônus Checklist do Sono Restaurador" class="bonus-img">
+      </div>
+      <p class="offer-description">🚨 <span class="highlight">DOBRO DE VALOR PELO MESMO PREÇO!</span> Não perca essa oportunidade única de transformar suas noites e dias!</p>
+    </div>
     <div class="benefits">
       <h2>✨ O que você vai aprender:</h2>
       <div class="benefit">✅ Como criar uma rotina noturna que prepara o corpo e a mente para dormir rápido.</div>
       <div class="benefit">✅ Técnicas simples para <span class="highlight">aumentar o sono profundo</span>.</div>
       <div class="benefit">✅ Como evitar os 7 maiores sabotadores do sono.</div>
       <div class="benefit">✅ Estratégias para acordar com energia e foco, sem depender de café.</div>
-    </div>
+      <div class="benefit">✅ <span class="highlight">BÔNUS EXCLUSIVO:</span> O Checklist da Higiene do Sono para aplicar na sua rotina.</div> </div>
 
     <div class="before-after">
       <div class="ba-card">
@@ -170,21 +242,19 @@
       <div class="ba-card">
         <h3>💪 Depois</h3>
         <p>Descanso profundo, energia renovada, mente clara e produtividade em alta.</p>
-      </div>
-    </div>
+        </div>
+    </div>
 
-    <div class="testimonials">
-      <h2>💬 O que dizem nossos leitores:</h2>
-      <div class="testimonial">"Em apenas 1 semana aplicando o guia, parei de acordar cansado. Energia renovada!" – <i>Lucas, 28 anos</i></div>
-      <div class="testimonial">"Sempre tive insônia, mas agora consigo dormir em menos de 15 minutos." – <i>Ana, 34 anos</i></div>
-      <div class="testimonial">"Achei que fosse impossível acordar cedo sem sofrer. Hoje acordo antes do despertador." – <i>Carla, 41 anos</i></div>
-    </div>
+    <div class="testimonials">
+      <h2>💬 O que dizem nossos leitores:</h2>
+      <div class="testimonial">"Em apenas 1 semana aplicando o guia, parei de acordar cansado. Energia renovada!" – <i>Lucas, 28 anos</i></div>
+      <div class="testimonial">"Sempre tive insônia, mas agora consigo dormir em menos de 15 minutos." – <i>Ana, 34 anos</i></div>
+      <div class="testimonial">"Achei que fosse impossível acordar cedo sem sofrer. Hoje acordo antes do despertador." – <i>Carla, 41 anos</i></div>
+    </div>
 
-    <h2>🚀 Está pronto para transformar seu sono?</h2>
-    <p>Um clique pode mudar suas noites para sempre.  
-    Acesse agora o guia completo e descubra o que está te impedindo de dormir melhor.</p>
+    <h2>🚀 Está pronto para transformar seu sono?</h2>
+    <p>Um clique pode mudar suas noites para sempre. Acesse agora o guia completo e descubra o que está te impedindo de dormir melhor.</p>
 
-    <a href="https://go.hotmart.com/U101440542K" class="btn">Quero meu guia agora</a>
-  </div>
+    <a href="https://hotm.art/Sonolyt" class="btn">Quero meus 2 guias agora!</a>   </div>
 </body>
 </html>
