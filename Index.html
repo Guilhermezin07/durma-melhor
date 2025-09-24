@@ -1,136 +1,271 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Como o Excesso de Telas Está Afetando o Seu Sono</title>
+  <title>Sono profundo, Vida plena - Oferta Exclusiva</title> 
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8P6MYSMJ1J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8P6MYSMJ1J');
+  </script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0a0a23;
-      color: #fff;
       margin: 0;
       padding: 0;
+      font-family: arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient(135deg, #360552, #8f07df, #390b8d, #3706fc, #051674, #0a9dff);
+      background-size: 400% 400%;
+      animation: gradientanimation 15s ease infinite;
+      overflow-x: hidden;
     }
+
+    @keyframes gradientanimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {opacity: 0.2;}
+      50% {opacity: 1;}
+    }
+
     .container {
-      width: 90%;
+      position: relative;
+      z-index: 1;
       max-width: 900px;
       margin: auto;
-      padding: 20px;
+      padding: 50px 20px;
     }
-    h1, h2, h3 {
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin: 40px 0 20px;
       color: #ffd700;
+      text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.5);
     }
-    .button {
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.7em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
       display: inline-block;
-      padding: 15px 25px;
-      background-color: #ff9800;
-      color: #000;
+      background: #ff9800;
+      color: #fff;
+      padding: 18px 30px;
       text-decoration: none;
-      font-weight: bold;
       border-radius: 8px;
-      margin-top: 20px;
+      font-size: 1.3em;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: 30px;
+      box-shadow: 0px 0px 15px rgba(255, 152, 0, 0.6);
+      animation: pulse 1.8s infinite;
     }
-    ul {
-      list-style-type: '✔️ ';
-      padding-left: 20px;
+
+    .btn:hover {
+      background: #e68900;
+      transform: scale(1.05);
     }
-    .section {
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(255,152,0,0.7); }
+      50% { box-shadow: 0 0 25px rgba(255,152,0,1); }
+      100% { box-shadow: 0 0 10px rgba(255,152,0,0.7); }
+    }
+
+    .benefits, .testimonials, .before-after, .offer-section { /* adicionado .offer-section */
+      background: rgba(0,0,0,0.4);
+      padding: 25px;
+      border-radius: 12px;
       margin-bottom: 40px;
     }
+
+    .benefit, .testimonial {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+
     .highlight {
-      color: #00ffff;
+      font-weight: bold;
+      color: #ffd700;
+      text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6);
+    }
+
+    .before-after {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .ba-card {
+      width: 45%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .ba-card h3 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    /* estilos para a nova seção de oferta */
+    .offer-section h2.highlight-offer {
+        font-size: 2.5em;
+        color: #ff9800; /* dourado/laranja para destaque */
+        text-shadow: 0px 0px 10px rgba(255, 152, 0, 0.8);
+        margin-bottom: 15px;
+    }
+
+    .offer-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* espaço entre as imagens */
+        margin: 30px 0;
+        flex-wrap: wrap; /* para quebra de linha em telas pequenas */
+    }
+
+    .offer-images img {
+        max-width: 250px; /* tamanho da imagem principal */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5); /* sombra para destacar */
+    }
+
+    .offer-images .bonus-img {
+        max-width: 150px; /* tamanho do bônus, um pouco menor */
+        opacity: 0.8; /* levemente menos proeminente que o principal */
+        transform: rotate(5deg); /* um toque de dinamismo */
+    }
+
+    .offer-description {
+        font-size: 1.3em;
+        line-height: 1.8em;
+        font-weight: bold;
+        color: #ffd700; /* cor de destaque para a descrição */
+        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6);
+    }
+    /* media queries para responsividade */
+    @media (max-width: 768px) {
+        .ba-card {
+            width: 90%; /* cartões antes/depois ocupam quase toda a largura em telas menores */
+        }
+        h1 {
+            font-size: 2.2em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1em;
+        }
+        .btn {
+            padding: 15px 25px;
+            font-size: 1.1em;
+        }
+        .offer-section h2.highlight-offer {
+            font-size: 2em;
+        }
+        .offer-images img, .offer-images .bonus-img {
+            max-width: 180px; /* ajusta o tamanho das capas para telas menores */
+        }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>O EXCESSO DE TELAS ESTÁ DESTRUINDO O SEU SONO!</h1>
-    <h2>Descubra como as telas estão prejudicando sua saúde e aprenda como recuperar noites tranquilas, energia e bem-estar.</h2>
-
-    <div class="section">
-      <h3>❌ Problemas que você pode estar vivendo:</h3>
-      <ul>
-        <li>Dificuldade para dormir</li>
-        <li>Acorda várias vezes durante a noite</li>
-        <li>Sono leve e não restaurador</li>
-        <li>Cansaço constante, estresse e ansiedade</li>
-        <li>Irritação, falta de foco e produtividade</li>
-        <li>Uso excessivo do celular até na cama</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>🔍 Por que isso acontece?</h3>
-      <p>O excesso de telas à noite bloqueia a produção de <span class="highlight">melatonina</span>, o hormônio que induz o sono. A luz azul mantém seu cérebro em alerta, gerando insônia, ansiedade e cansaço.</p>
-    </div>
-
-    <div class="section">
-      <h3>🚀 Solução:</h3>
-      <p><strong>E-book Digital – “Como o Excesso de Telas Está Afetando o Seu Sono”</strong></p>
-      <ul>
-        <li>Como a luz azul age no seu cérebro</li>
-        <li>Por que seu sono está sendo destruído</li>
-        <li>Técnicas e hábitos para recuperar seu sono</li>
-        <li>Desafio 7 dias para desconectar e dormir melhor</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>🎯 Você vai receber:</h3>
-      <ul>
-        <li>E-book digital completo (acesso imediato)</li>
-        <li>Checklist da Higiene do Sono</li>
-        <li>Desafio Digital 7 Dias para transformar seu sono</li>
-        <li>Passo a passo simples, claro e direto</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>👥 Para quem é este e-book:</h3>
-      <ul>
-        <li>Quem não dorme bem</li>
-        <li>Quem sente cansaço constante</li>
-        <li>Quem fica no celular antes de dormir</li>
-        <li>Quem quer mais disposição, energia, foco e bem-estar</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>🔥 Transformações que você vai sentir:</h3>
-      <ul>
-        <li>Dormir mais rápido</li>
-        <li>Sono mais profundo e restaurador</li>
-        <li>Menos ansiedade e estresse</li>
-        <li>Mais energia e produtividade</li>
-        <li>Qualidade de vida melhor todos os dias</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>💰 Oferta Especial:</h3>
-      <p><strong>De R$47,00 por apenas R$19,90</strong> 🔥 Por tempo limitado!</p>
-    </div>
-
-    <div class="section">
-      <h3>🛡️ Garantia:</h3>
-      <ul>
-        <li>Compra 100% segura</li>
-        <li>Acesso imediato após o pagamento</li>
-        <li>Seu sono e sua qualidade de vida valem muito mais que isso</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>✅ Como funciona:</h3>
-      <ul>
-        <li>Clique no botão abaixo</li>
-        <li>Faça seu pagamento na página segura da Kiwify</li>
-        <li>Receba o e-book no seu e-mail e comece sua transformação hoje</li>
-      </ul>
-      <a href="#" class="button">Quero melhorar meu sono agora!</a>
-    </div>
+  <div class="stars">
+    <div class="star" style="top:10%; left:20%; animation-duration:2s;"></div>
+    <div class="star" style="top:30%; left:50%; animation-duration:3s;"></div>
+    <div class="star" style="top:60%; left:70%; animation-duration:1.5s;"></div>
+    <div class="star" style="top:80%; left:10%; animation-duration:2.5s;"></div>
+    <div class="star" style="top:40%; left:90%; animation-duration:2.2s;"></div>
+    <div class="star" style="top:15%; left:75%; animation-duration:1.8s;"></div>
   </div>
+
+  <div class="container">
+    <h1>Sono profundo, Vida plena 🌙</h1>
+    <p>O guia prático para transformar suas noites e acordar cheio de energia.  
+    descubra os segredos de quem realmente domina o poder do sono.</p>
+
+    <div class="offer-section">
+      <h2 class="highlight-offer">✨ Oferta exclusiva: compre 1 e leve outro! ✨</h2>
+      <p class="offer-description">Adquira o guia "sono profundo, vida plena" e receba grÁtis o "checklist do sono restaurador"! </p>
+      <div class="offer-images">
+        <img src="https://i.imgur.com/se2y3jm.png" alt="capa do e-book sono profundo, vida plena" class="main-ebook-img"> 
+        <img src="https://i.imgur.com/c7wwo13.png" alt="capa do bônus checklist do sono restaurador" class="bonus-img">
+      </div>
+      <p class="offer-description">🚨 <span class="highlight">dobro de valor pelo mesmo preÇo!</span> não perca essa oportunidade única de transformar suas noites e dias!</p>
+    </div>
+    <div class="benefits">
+      <h2>✨ O que você vai aprender:</h2>
+      <div class="benefit">✅ como criar uma rotina noturna que prepara o corpo e a mente para dormir rápido.</div>
+      <div class="benefit">✅ técnicas simples para <span class="highlight">aumentar o sono profundo</span>.</div>
+      <div class="benefit">✅ como evitar os 7 maiores sabotadores do sono.</div>
+      <div class="benefit">✅ estratégias para acordar com energia e foco, sem depender de café.</div>
+      <div class="benefit">✅ <span class="highlight">bÔnus exclusivo:</span> o checklist da higiene do sono para aplicar na sua rotina.</div> </div>
+
+    <div class="before-after">
+      <div class="ba-card">
+        <h3>😩 Antes de conhecer o Guia </h3>
+        <p>Noites mal dormidas, cansaço constante, dificuldade de foco e irritação.</p>
+      </div>
+      <div class="ba-card">
+        <h3>💪 Depois de conhecer o Guia </h3>
+        <p>Descanso profundo, energia renovada, mente clara e produtividade em alta.</p>
+        </div>
+    </div>
+
+    <div class="testimonials">
+      <h2>💬 O que dizem nossos leitores:</h2>
+      <div class="testimonial">"em apenas 1 semana aplicando o guia, parei de acordar cansado. energia renovada!" – <i>lucas, 28 anos</i></div>
+      <div class="testimonial">"sempre tive insônia, mas agora consigo dormir em menos de 15 minutos." – <i>ana, 34 anos</i></div>
+      <div class="testimonial">"achei que fosse impossível acordar cedo sem sofrer. hoje acordo antes do despertador." – <i>carla, 41 anos</i></div>
+    </div>
+
+    <h2>🚀 Está pronto para transformar seu sono?</h2>
+    <p>Um clique pode mudar suas noites para sempre.  
+    Acesse agora o guia completo e descubra o que está te impedindo de dormir melhor.</p>
+
+    <a href="https://go.hotmart.com/u101440542k" class="btn">quero meus 2 guias agora!</a>   </div>
 </body>
 </html>
