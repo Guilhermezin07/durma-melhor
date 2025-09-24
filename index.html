@@ -266,7 +266,16 @@
     <p>Um clique pode mudar suas noites para sempre.  
     acesse agora o guia completo e descubra o que está te impedindo de dormir melhor.</p>
 
-    <a href="https://pay.hotmart.com/U101440542K?checkoutMode=10&hidePayPal=1&bid=1758742727011 " class="btn">quero meus 2 guias agora!</a>   </div>
+  <a href="https://pay.hotmart.com/U101440542K?checkoutMode=10&hidePayPal=1&bid=1758742727011 " class="btn" id="ctaComprar">quero meus 2 guias agora!</a>  </div>
+  <script>
+  document.getElementById('ctaComprar').addEventListener('click', function() {
+    gtag('event', 'clique_comprar_ebook', {
+      'event_category': 'vitrine',
+      'event_label': 'botao_oferta_dupla'
+    });
+  });
+</script>
 </body>
 </html>
+
 
