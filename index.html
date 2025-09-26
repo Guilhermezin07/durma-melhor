@@ -360,8 +360,26 @@
     Acesse agora o guia completo e descubra o que está te impedindo de dormir melhor.</p>
     <p style="font-size: 1.4em; color: #00ff00; font-weight: bold; text-shadow: 0 0 10px rgba(0,255,0,0.7); margin-top: -10px;">Seu antídoto para noites perdidas está a um clique!</p>
 
-    <a href="https://pay.hotmart.com/U101440542K?checkoutMode=10&hidePayPal=1&bid=1758828242275 " class="btn">✨ QUERO MEUS 2 GUIAS POR R$10,90 AGORA! ✨</a>    </div>
+    <a onclick="return false;" 
+   href="https://pay.hotmart.com/U101440542K?checkoutMode=10&hidePayPal=1&bid=1758828242275&src=lp-widget-main-btn" 
+   class="btn hotmart-fb hotmart__button-checkout">
+   ✨ QUERO MEUS 2 GUIAS POR R$10,90 AGORA! ✨    </a>   </div>
+
+    <script type="text/javascript">
+        function importHotmart(){ 
+            var imported = document.createElement('script'); 
+            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+            document.head.appendChild(imported); 
+            var link = document.createElement('link'); 
+            link.rel = 'stylesheet'; 
+            link.type = 'text/css'; 
+            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+            document.head.appendChild(link);	} 
+        importHotmart(); 
+    </script>
+
 </body>
 </html>
+
 
 
